@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+    <!-- Navbar with a log out button -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <a class="navbar-brand" href="#">Chocolate Covered Ramen Noodles</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Log Out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content area -->
+
+    <div class="bg-image"></div>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Chocolate Covered Ramen Noodles</h1>
+
+        <div class="card card-custom">
+            <div class="row no-gutters">
+                <!-- Image in the card -->
+                <div class="col-md-6">
+                    <img src="{{ url_for('static', filename='chocolate_ramen.png') }}" alt="Chocolate Ramen Image"
+                        class="img-fluid rounded-corners">
+                </div>
+
+                <!-- Ingredients List in the card -->
+                <div class="col-md-6">
+                    <div class="card-body custom-card-body">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>Dried ramen noodles - 1 pack</li>
+                            <li>Chocolate - 100 grams</li>
+                            <li>Peanut butter - 2 tablespoons</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe Instructions in the card -->
+            <div class="card-footer">
+                <h4>Instructions</h4>
+                <p>
+                    1. Melt the chocolate in a microwave-safe bowl.<br>
+                    2. Stir in the peanut butter until smooth.<br>
+                    3. Break the dried ramen noodles into smaller pieces and mix them into the chocolate and peanut
+                    butter mixture until fully coated.<br>
+                    4. Lay the chocolate-covered noodles on a parchment paper and allow them to cool until the chocolate
+                    has hardened.<br>
+                    5. Enjoy your chocolate-covered ramen treat!<br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            {% if message %}
+            alert("{{ message }}");
+            {% endif %}
+        });
+    </script>
+
+</body>
+
+</html>

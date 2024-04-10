@@ -1,0 +1,80 @@
+.custom-navbar {
+    background-color: #333;
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+    color: #FFF !important;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #ddd !important;
+}
+
+.rounded-corners {
+    border-radius: 15px;
+}
+
+.custom-card-body {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+    /* Light gray from Bootstrap's color palette */
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    /* consistent rounded corner */
+}
+
+.custom-card-body h4 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    /* Adding a bottom border to the title for emphasis */
+    padding-bottom: 10px;
+    /* Some padding to give space below the title */
+    margin-bottom: 20px;
+    /* Spacing out the title from the content below */
+}
+
+.card-custom {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    /* Increased border-radius for rounder corners */
+    overflow: hidden;
+    /* Ensures inner elements don't spill out */
+}
+
+.bg-image {
+    background-image: url('background.png');
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    position: fixed;
+    /* Make it cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Make sure it's behind the content */
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Mild black background to ensure text readability */
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.rounded-corners {
+    border-radius: 15px;
+}
+
+.card-custom {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 25px; /* Increased border-radius for rounder corners */
+    overflow: hidden; /* Ensures inner elements don't spill out */
+}
